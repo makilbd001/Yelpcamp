@@ -1,0 +1,79 @@
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    object-fit: cover;
+    border-top-left-radius: 10px; /* Match card's rounded corners */
+    border-top-right-radius: 10px;
+}
+.card{
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 10px;
+    overflow: hidden;
+    border-top-left-radius: 10px; /* Match card's rounded corners */
+    border-top-right-radius: 10px;
+}
+#map {
+    margin-bottom: 30px; /* Adds space below the map */
+    border-radius: 10px; /* Rounds the corners */
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    #map {
+        height: 300px; /* Adjust map height for smaller screens */
+    }
+
+    .carousel-item img {
+        height: 300px; /* Adjust carousel height for tablets */
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card img {
+        height: 200px; /* Adjust image height for tablets */
+    }
+
+    h5 {
+        font-size: 22px; /* Smaller heading for tablets */
+    }
+
+    .btn {
+        font-size: 15px;
+        height: 35px;
+    }
+}
+
+/* Media query for mobile (phones) */
+@media screen and (max-width: 576px) {
+    .col-6 {
+        width: 100%; /* Stacks columns vertically on small screens */
+    }
+
+    #map {
+        height: 250px; /* Smaller map height for mobile */
+        margin-bottom: 15px;
+    }
+
+    .carousel-item img {
+        height: 200px; /* Smaller carousel height for mobile */
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .card img {
+        height: 150px; /* Smaller image height for mobile */
+    }
+
+    h5 {
+        font-size: 20px; /* Smaller heading for mobile */
+    }
+
+    .btn {
+        font-size: 14px;
+        height: 32px;
+    }
+}

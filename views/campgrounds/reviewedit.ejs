@@ -1,0 +1,27 @@
+<%- layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/stars.css">
+<link rel="stylesheet" href="/stylesheets/reviewedit.css">
+
+<div class="container">
+    <h2>Edit Review</h2>
+    <form action="/campgrounds/<%= campground._id %>/reviews/<%= review._id %>?_method=PUT" method="POST" class="review-form">
+        <fieldset class="starability-basic">
+            <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" <% if(review.rating === 0) { %>checked<% } %> />
+            <input type="radio" id="first-rate1" name="review[rating]" value="1" <% if(review.rating === 1) { %>checked<% } %> />
+            <label for="first-rate1" title="1 star">1 star</label>
+            <input type="radio" id="first-rate2" name="review[rating]" value="2" <% if(review.rating === 2) { %>checked<% } %> />
+            <label for="first-rate2" title="2 stars">2 stars</label>
+            <input type="radio" id="first-rate3" name="review[rating]" value="3" <% if(review.rating === 3) { %>checked<% } %> />
+            <label for="first-rate3" title="3 stars">3 stars</label>
+            <input type="radio" id="first-rate4" name="review[rating]" value="4" <% if(review.rating === 4) { %>checked<% } %> />
+            <label for="first-rate4" title="4 stars">4 stars</label>
+            <input type="radio" id="first-rate5" name="review[rating]" value="5" <% if(review.rating === 5) { %>checked<% } %> />
+            <label for="first-rate5" title="5 stars">5 stars</label>
+        </fieldset>
+        <div class="form-group">
+            <label for="body">Review</label>
+            <textarea class="form-control" name="review[body]" id="body" cols="30" rows="5" required><%= review.body %></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Update Review</button>
+    </form>
+</div>
