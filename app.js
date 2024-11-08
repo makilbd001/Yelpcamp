@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 app.use('/search', searchRoutes);
 
-const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+const secret = process.env.SESSION_SECRET || 'thisshouldbeabettersecret!';
 
 const store = new MongoStore({
     url: dbUrl,
